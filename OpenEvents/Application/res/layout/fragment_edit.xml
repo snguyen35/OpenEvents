@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    tools:context=".EditFragment" >
+	
+    <TextView
+	    android:id="@+id/textViewName"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"	
+	    android:layout_marginTop="20dp"    
+	    android:text="@string/string_event_name" />
+    
+    <EditText
+        android:id="@+id/edEventName"
+        android:inputType="text" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"       
+        android:layout_alignBaseline="@+id/textViewName"
+        android:layout_toRightOf="@+id/textViewName"       
+        android:textColor="@color/grey" >
+        <requestFocus />
+    </EditText>
+
+    <TextView
+	    android:id="@+id/textViewDetails"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"	
+	    android:layout_below="@+id/textViewName"
+	    android:layout_marginTop="20dp"    	    
+	    android:text="@string/string_event_details" />
+    
+    <EditText
+        android:id="@+id/edDetails"        
+        android:inputType="text" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"            
+        android:layout_alignBaseline="@+id/textViewDetails"
+        android:layout_toRightOf="@+id/textViewDetails"        
+        android:textColor="@color/grey" />
+
+    <TextView
+	    android:id="@+id/textViewLocation"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"	
+	    android:layout_below="@+id/textViewDetails"
+	    android:layout_marginTop="20dp"    	    
+	    android:text="@string/string_event_location" />
+    
+    <EditText
+        android:id="@+id/edLocation"       
+        android:inputType="text" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"        
+        android:layout_alignBaseline="@+id/textViewLocation"
+        android:layout_toRightOf="@+id/textViewLocation"      
+        android:textColor="@color/grey" />
+    
+    <TextView
+	    android:id="@+id/textViewDatetime"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"	
+	    android:layout_below="@+id/textViewLocation"
+	    android:layout_marginTop="20dp"    	    
+	    android:text="@string/string_event_time" />
+    
+	<LinearLayout 
+	    android:id="@+id/datetime"
+	    android:orientation="horizontal"	    
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"      
+	    android:layout_below="@+id/textViewLocation"
+        android:layout_toRightOf="@+id/textViewLocation"
+        android:layout_marginTop="10dp">
+        
+	    <EditText
+	        android:id="@+id/edDate"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight=".50"
+	        android:inputType="date"
+	        android:hint="@string/string_select_date" />
+	    
+	    <ImageButton
+	        android:id="@+id/btnDate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:contentDescription="@string/ic_description"
+	        android:src="@drawable/ic_calendar"
+	        android:background="@android:color/transparent" />
+	    
+	    <EditText
+	        android:id="@+id/edTime"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight=".30"
+	        android:inputType="time"
+	        android:hint="@string/string_select_time" />
+	    
+	     <ImageButton
+	         android:id="@+id/btnTime"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_gravity="center_vertical"
+	         android:contentDescription="@string/ic_description"
+	         android:src="@drawable/ic_clock" 
+	         android:background="@android:color/transparent"/>
+
+	</LinearLayout>
+	
+	<Button
+        android:id="@+id/btn_Cancel_Event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"     
+        android:layout_below="@+id/datetime"
+        android:layout_marginTop="20dp"       
+        android:text="@string/btn_cancel_event" 
+ 		android:textSize="13sp"/>
+
+</RelativeLayout>

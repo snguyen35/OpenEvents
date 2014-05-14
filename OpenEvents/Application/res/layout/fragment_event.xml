@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal" >
+
+        <ProgressBar			
+			style="?android:attr/progressBarStyleLarge"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"			
+			android:layout_marginRight="5dp" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/loading" />        
+    </LinearLayout>
+	
+    <!-- </ListView> -->
+    <ListView
+        android:id="@+id/listEvent"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/grey_light"
+        android:dividerHeight="1px" />
+    
+    <TextView
+        android:id="@+id/tvNoResult"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/no_event_found"
+        android:textColor="@color/grey"
+        android:textSize="12sp" />
+    
+</LinearLayout>

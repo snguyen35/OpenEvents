@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:padding="5dp"
+    android:background="@drawable/attendees_selector">
+ 
+    <!--  Menu Icon -->
+
+    <ImageView
+        android:id="@+id/attendees_profile_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/desc_list_item_icon"        
+        android:src="@drawable/no_image" />
+ 
+    <!-- Menu Name -->
+
+    <TextView
+        android:id="@+id/attendees_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/attendees_profile_image"
+        android:paddingLeft="10dp"
+        android:text="@string/string_attendee_name"
+        android:textColor="@color/grey"
+        android:textSize="15sp" />
+
+</RelativeLayout>

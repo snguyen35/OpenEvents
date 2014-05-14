@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"   
+    android:descendantFocusability="blocksDescendants"
+    android:padding="5dp" >
+        
+    <csc.mobility.openevents.ui.customview.CustomCalendarView 
+		    android:id="@+id/calendarView"
+		    android:layout_width="50dp"
+		    android:layout_height="50dp"
+		    style="@style/CustomCalendarStyle"		    
+        	android:layout_alignParentLeft="true"
+        	android:layout_alignParentTop="true" />
+    
+    <LinearLayout
+        android:id="@+id/contentView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="60dp"
+        android:layout_toRightOf="@+id/calendarView"
+        android:orientation="vertical" >
+		
+        <TextView
+            android:id="@+id/tvEventTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="26dip"
+            android:gravity="center_vertical"            
+            android:textColor="@color/event.subject"
+            android:textSize="16sp"           
+            android:text="@string/string_event_name"/>
+
+	    <TextView
+	        android:id="@+id/tvEventLocation"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        android:text="@string/string_event_location"	        
+	        android:textColor="@color/grey"
+	        android:textSize="12sp" />
+
+    </LinearLayout>   
+	
+</RelativeLayout> 

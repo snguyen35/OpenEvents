@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:sothree="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/sliding_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/white"
+		android:gravity="bottom"		
+		sothree:panelHeight="100dp"
+		sothree:shadowHeight="1dp"        
+		sothree:dragView="@+id/slider">
+      
+    	<RelativeLayout
+			android:id="@+id/top"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:paddingLeft="5dp"
+			android:paddingRight="5dp"
+			android:paddingTop="5dp"			
+			android:paddingBottom="10dp">
+			
+				<csc.mobility.openevents.ui.customview.CustomCalendarView 
+				    android:id="@+id/calendarView"
+				    android:layout_width="70dp"
+				    android:layout_height="70dp"
+				    style="@style/CustomCalendarStyle"		    
+		        	android:layout_alignParentLeft="true"
+		        	android:layout_alignParentTop="true" />
+				  
+				<TextView
+				    android:id="@+id/tvEName"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginLeft="5dp"
+				    android:layout_toRightOf="@+id/calendarView"
+				    android:textColor="@color/blue"
+				    android:textStyle="bold" />
+				  
+				<TextView
+				    android:id="@+id/tvELocation"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_below="@+id/tvEName"
+				    android:layout_marginLeft="5dp"
+				    android:layout_marginTop="10dp"
+				    android:layout_toRightOf="@+id/calendarView"		    
+				    android:scrollHorizontally="true" 
+				    android:textColor="@color/grey"/>
+				
+				<ScrollView   
+				    android:id="@+id/scroll_desc"  	      
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"   	    
+					android:paddingTop="5dp"
+					android:paddingBottom="5dp"
+					android:layout_below="@+id/calendarView"
+					android:layout_above="@+id/buttonBar"> 
+				 
+					<TextView
+						android:id="@+id/tvEDescription"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:background="@color/blue_light"
+						android:textSize="13sp"
+						android:textColor="@color/grey"
+						android:paddingTop="10dp"			
+						android:paddingBottom="5dp"/> 
+				</ScrollView> 
+		      
+				<LinearLayout
+			    	android:id="@+id/buttonBar"
+				    android:layout_width="match_parent"
+				    android:layout_height="30dip"
+				    android:layout_alignParentBottom="true"
+					android:layout_alignParentLeft="true"	
+				    android:orientation="horizontal"
+				    android:weightSum="1" >
+		    	
+				    <ViewFlipper 
+			    	    android:id="@+id/flipper"
+			    	    android:layout_width="0dp"
+				        android:layout_height="match_parent"
+				        android:layout_weight="0.33">  
+			    	    
+				        <Button
+					        android:id="@+id/btn_Join_Event"				        
+					        android:layout_width="match_parent"			       
+					        android:layout_height="match_parent"         					             
+					        android:background="@drawable/my_button_selector"	       
+			        		android:text="@string/btn_join_event"
+					        android:textSize="13sp"
+					        android:textColor="@color/grey"/> 
+					        
+				        <Button
+					        android:id="@+id/btn_Edit_Event"				        
+					        android:layout_width="match_parent"
+					        android:layout_height="match_parent"			       
+					        android:background="@drawable/my_button_selector"		        
+			        		android:text="@string/btn_edit_event"    				       
+					        android:textSize="13sp"
+					        android:textColor="@color/grey"/> 
+				        
+			    	    <Spinner
+			    	        android:id="@+id/spinner_eventStt"
+			    	        android:layout_width="match_parent"
+			    	        android:layout_height="match_parent"	    	        
+			    	        android:spinnerMode="dropdown" />
+			    	    	    	     	        
+			    	</ViewFlipper>	    
+				
+					<Button 
+					    android:id="@+id/btn_Get_Direction" 
+					    android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="0.33"				
+						android:layout_marginLeft="10dp"				    
+					   
+					    android:background="@drawable/my_button_selector"
+					    android:text="@string/btn_get_direction"
+					    android:textSize="13sp"
+					    android:textColor="@color/grey"/> 
+				  
+					<Button 
+					    android:id="@+id/btn_Invite_Friend"
+					    android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="0.33"				
+						android:layout_marginLeft="10dp"				
+					  
+					    android:background="@drawable/my_button_selector"
+					    android:text="@string/btn_invite_friend"
+					    android:textSize="13sp"
+					    android:textColor="@color/grey"/>          
+		   		</LinearLayout>
+		</RelativeLayout>
+
+		<RelativeLayout
+		    android:id="@+id/bottom"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent" >   
+		  		   
+		   <ImageView
+			    android:id="@+id/slider"
+			    android:layout_width="match_parent"
+			    android:layout_height="30dp"
+			    android:layout_alignParentLeft="true"
+				android:layout_alignParentTop="true"	
+			    android:background="@color/blue_light"
+			    android:contentDescription="@string/ic_description"
+			    android:src="@drawable/slide_up" />
+
+			<com.google.android.gms.maps.MapView android:id="@+id/map"
+			    android:layout_width="match_parent"
+			 	android:layout_height="match_parent"
+			 	android:layout_below="@+id/slider"/>	
+		</RelativeLayout>
+       
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>
+    
+    	
+
+
+
+       

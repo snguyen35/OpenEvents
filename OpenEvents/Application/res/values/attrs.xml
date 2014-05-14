@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomPagerTabStrip">
+        <attr name="indicatorColor" format="reference|color" />
+    </declare-styleable>
+    
+    <declare-styleable name="CustomCalendarView">        
+        <attr name="headerBGColor" format="reference|color" />        
+        <attr name="headerTextColor" format="reference|color" />
+        <attr name="bodyBGColor" format="reference|color" />
+        <attr name="bodyTextColor" format="reference|color" />        
+    </declare-styleable>   
+   
+</resources>

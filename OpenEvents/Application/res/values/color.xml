@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- General color -->
+    <color name="white">#ffffff</color>
+    <color name="blue">#0083af</color>
+    <color name="blue_light">#d9f5ff</color>
+    <color name="green">#1d766f</color>
+    <color name="green_light">#e2fffd</color>
+    <color name="grey">#555555</color>
+    <color name="grey_light">#8f8f8f</color>
+    
+    
+    <color name="actionbar_background">#0099cc</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+        
+    <color name="menu_item_title">#ffffff</color>    
+    <color name="menu_divider">#145550</color>    
+    <color name="menu_icon_background">#308680</color>
+    <color name="menu_icon_background_hover">#336865</color>
+    <color name="menu_item_background">#0D746C</color>
+    <color name="menu_item_background_hover">#1C5753</color>
+    <color name="menu_item_border">#2D8A84</color>
+    
+    
+    <color name="text.color">#555555</color>
+    
+    <color name="location.distance.border">#555555</color>
+    <color name="location.distance.background">#ececec</color>
+    
+    <color name="event.subject">#0083af</color>   
+    <color name="event.calendar.top.text">#ffffff</color>
+    <color name="event.calendar.top.backdround">#0083af</color>
+    <color name="event.calendar.bot.text">#0083af</color>
+    <color name="event.calendar.bot.background">#d9f5ff</color>
+    
+    <color name="event.subject.odd">#1d766f</color>
+    <color name="event.calendar.top.text.odd">#ffffff</color>
+    <color name="event.calendar.top.backdround.odd">#1d766f</color>
+    <color name="event.calendar.bot.text.odd">#1d766f</color>
+    <color name="event.calendar.bot.background.odd">#d9f5ff</color>    
+    
+    <color name="event.searchbox.background">#ececce</color>
+    <color name="event.create.text">#8f8f8f</color>  
+    
+    <color name="list_background">#ffffff</color>
+    <color name="list_background_pressed">#992416</color>
+   
+</resources>

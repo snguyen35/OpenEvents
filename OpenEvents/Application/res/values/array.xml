@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="color_names">
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>White</item>
+        <item>Black</item>
+    </string-array>
+    
+  
+    <!-- Nav Drawer Item Names -->
+    <string-array name="menu_item_names">
+        <item>Map Search</item>   
+        <item>All events</item>
+        <item>Create event</item>            
+        <item>Notifications</item>        
+        <item>Sign out</item>
+        <item>Help</item>
+    </string-array>
+
+    <!-- Nav Drawer Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="menu_item_icons">
+        <item>@drawable/ic_location_light</item>  
+        <item>@drawable/ic_all_event</item>
+        <item>@drawable/ic_create_event</item>              
+        <item>@drawable/ic_notifications</item>       
+        <item>@drawable/ic_signout</item>
+        <item>@drawable/ic_help</item>
+    </array>
+    
+    <string-array name="event_status">        
+        <item>@string/event_going</item>
+        <item>@string/event_maybe</item>
+        <item>@string/event_not_going</item>
+    </string-array>	
+    
+</resources>

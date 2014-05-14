@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    tools:context=".CreateFragment" >
+
+    <EditText
+        android:id="@+id/edEventName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"       
+        android:layout_marginTop="20dp"
+        android:hint="@string/string_event_name"
+        android:textColor="@color/event.create.text" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/edDetails"
+        android:layout_below="@+id/edEventName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"            
+        android:layout_marginTop="20dp"       
+        android:hint="@string/string_event_details"
+        android:textColor="@color/event.create.text" />
+
+    <EditText
+        android:id="@+id/edLocation"
+        android:layout_below="@+id/edDetails"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"        
+        android:layout_marginTop="20dp"     
+        android:hint="@string/string_event_location"
+        android:textColor="@color/event.create.text" />
+    
+	<LinearLayout 
+	    android:id="@+id/datetime"
+	    android:orientation="horizontal"
+	    android:layout_below="@+id/edLocation"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"          
+        android:layout_marginTop="20dp">
+        
+	    <EditText
+	        android:id="@+id/edDate"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight=".60"
+	        android:inputType="date"
+	        android:hint="@string/string_select_date" />
+	    
+	    <ImageButton
+	        android:id="@+id/btnDate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:contentDescription="@string/ic_description"
+	        android:src="@drawable/ic_calendar"
+	        android:background="@android:color/transparent" />
+	    
+	    <EditText
+	        android:id="@+id/edTime"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight=".40"
+	        android:inputType="time"
+	        android:hint="@string/string_select_time" />
+	    
+	     <ImageButton
+	         android:id="@+id/btnTime"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_gravity="center_vertical"
+	         android:contentDescription="@string/ic_description"
+	         android:src="@drawable/ic_clock" 
+	         android:background="@android:color/transparent"/>
+
+	</LinearLayout>
+    
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:layout_below="@+id/datetime"
+        android:layout_marginTop="20dp"
+        android:checked="true"
+        android:text="@string/string_switch" 
+        android:textOff="OFF"
+		android:textOn="ON" />
+
+</RelativeLayout>
